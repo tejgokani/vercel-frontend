@@ -289,3 +289,11 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   color: #7f56da;
 `;
+const API_BASE_URL = import.meta.env.VITE_API_URL;
+
+fetch(`${API_BASE_URL}/api/login`, {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ email, password })
+});
+
